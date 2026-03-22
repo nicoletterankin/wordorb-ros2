@@ -1,0 +1,21 @@
+# WordEthics.srv — Get ethics / wisdom analysis for a word
+# Service: /word_orb/ethics
+#
+# Uses the knowledge graph to find lessons where the word appears,
+# then extracts wisdom-phase content as ethical context.
+
+# --- Request ---
+string word                   # Word to analyze (required)
+string language               # Language code (default: en)
+---
+# --- Response ---
+bool success                  # True if the API call succeeded
+string error_message          # Empty on success, error details on failure
+
+string word                   # Echo of the requested word
+int32 appears_in              # Number of lessons containing this word
+string[] related_words        # Semantically related words from the graph
+
+# Wisdom extracts from lessons where this word appears (JSON array)
+# Each element: {"day": int, "track": str, "phase": str, "context": str}
+string lessons_json

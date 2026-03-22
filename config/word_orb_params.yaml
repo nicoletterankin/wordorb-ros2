@@ -1,0 +1,41 @@
+# word_orb_params.yaml — Default parameters for the Word Orb ROS2 node
+#
+# Override at launch:
+#   ros2 launch wordorb_ros2 word_orb.launch.py api_key:=wo_xxx
+#
+# Or at runtime:
+#   ros2 param set /word_orb_node default_language es
+
+word_orb_node:
+  ros__parameters:
+    # Word Orb API key — empty string uses the free tier (500 calls/day).
+    # Get a key at https://wordorb.ai/pricing
+    api_key: ""
+
+    # API base URL (only change for self-hosted instances)
+    base_url: "https://wordorb.ai"
+
+    # Cache TTL in seconds (avoid redundant API calls)
+    cache_ttl: 3600
+
+    # Default language for word lookups and lessons
+    # Supported: en, es, fr, de, zh, ja, ar, hi, pt, sw, ko, it, ru, nl,
+    #            sv, tr, th, vi, id, pl, cs, uk, el, he, ro, hu, da, fi,
+    #            nb, ms, tl, bn, ta, te, mr, gu, kn, ml, pa, ur, fa,
+    #            am, yo, zu, ha, ig, rw, so
+    default_language: "en"
+
+    # Default lesson track: learn, teach, grow, trivia
+    default_track: "learn"
+
+    # Default teaching archetype:
+    # architect, diplomat, empath, explorer, macgyver,
+    # provider, rebel, scientist, strategist, survivor
+    default_archetype: "explorer"
+
+    # Seconds between automatic daily-content publishes.
+    # 86400 = once per day.  Set lower for testing (e.g. 60.0).
+    publish_interval: 86400.0
+
+    # Word to publish on /word_orb/word_of_the_day
+    daily_word: "courage"

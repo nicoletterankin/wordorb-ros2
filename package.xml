@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>wordorb_ros2</name>
+  <version>1.0.0</version>
+  <description>
+    ROS2 interface to the Word Orb vocabulary and lesson API (wordorb.ai).
+    Provides services for word enrichment, ethics analysis, and lesson
+    retrieval, plus topics that publish daily word and lesson content.
+  </description>
+  <maintainer email="nicolette@lotdpbc.com">Nicolette Rankin</maintainer>
+  <license>MIT</license>
+
+  <url type="website">https://wordorb.ai</url>
+  <url type="repository">https://github.com/nicoletterankin/wordorb-ros2</url>
+  <url type="bugtracker">https://github.com/nicoletterankin/wordorb-ros2/issues</url>
+
+  <author email="nicolette@lotdpbc.com">Nicolette Rankin</author>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>rosidl_default_runtime</depend>
+
+  <exec_depend>python3-requests</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  <test_depend>ament_cmake_pytest</test_depend>
+
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

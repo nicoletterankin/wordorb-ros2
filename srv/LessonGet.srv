@@ -1,0 +1,29 @@
+# LessonGet.srv — Retrieve a lesson by calendar day
+# Service: /word_orb/lesson
+
+# --- Request ---
+int32 day                     # Calendar day (1-365, 0 = today)
+string track                  # Lesson track: learn, teach, grow, trivia (default: learn)
+string language               # Language code (default: en)
+string archetype              # Teaching archetype (default: explorer)
+---
+# --- Response ---
+bool success                  # True if the API call succeeded
+string error_message          # Empty on success, error details on failure
+
+int32 day                     # Calendar day returned
+string track                  # Track returned
+string title                  # Lesson title
+string theme                  # Lesson theme
+string age_group              # Age group
+string language               # Language
+string archetype              # Archetype used
+
+string phase_hook             # Hook phase content
+string phase_story            # Story phase content
+string phase_wonder           # Wonder phase content
+string phase_action           # Action phase content
+string phase_wisdom           # Wisdom phase content
+
+string archetypes_available   # JSON array of available archetypes
+string languages_available    # JSON array of available languages

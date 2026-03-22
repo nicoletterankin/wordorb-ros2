@@ -1,0 +1,24 @@
+# WordEnrich.srv — Look up a word via the Word Orb API
+# Service: /word_orb/enrich
+
+# --- Request ---
+string word                   # Word to look up (required)
+string language               # Language code (default: en)
+---
+# --- Response ---
+bool success                  # True if the API call succeeded
+string error_message          # Empty on success, error details on failure
+
+string word                   # Echo of the requested word
+string ipa                    # IPA pronunciation
+string pos                    # Part of speech
+string definition             # Full definition
+string etymology              # Etymology / word origin
+
+string tone_child             # Child-friendly definition
+string tone_teen              # Teen-appropriate definition
+string tone_adult             # Adult definition
+
+string image_url              # Illustration URL
+string audio_url              # Pronunciation audio URL
+string translations_json      # JSON map of translations
