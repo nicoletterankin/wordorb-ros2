@@ -47,7 +47,7 @@ curl -s -X POST https://wordorb.ai/api/signup \
   -d '{"email":"you@example.com","name":"My Robot"}' | jq .key
 ```
 
-Free tier: 500 calls/day, no credit card.
+Without a key: 200 calls/day per IP. With a key (no card needed): 10,000 calls/day. See [wordorb.ai/pricing](https://wordorb.ai/pricing) for paid plans.
 
 ### 5. Launch
 
@@ -92,7 +92,7 @@ ros2 topic echo /word_orb/lesson_of_the_day
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| `api_key` | string | `""` | Word Orb API key. Empty = free tier (500/day). |
+| `api_key` | string | `""` | Word Orb API key. Empty = no-key limit (200/day per IP). |
 | `base_url` | string | `https://wordorb.ai` | API base URL |
 | `cache_ttl` | int | `3600` | Seconds to cache API responses |
 | `default_language` | string | `en` | Default language for lookups (47 available) |

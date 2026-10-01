@@ -8,7 +8,7 @@
 
 word_orb_node:
   ros__parameters:
-    # Word Orb API key — empty string uses the free tier (500 calls/day).
+    # Word Orb API key — empty string uses the no-key limit (200 calls/day per IP); a key gives 10,000/day.
     # Get a key at https://wordorb.ai/pricing
     api_key: ""
 
