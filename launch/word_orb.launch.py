@@ -25,7 +25,7 @@ def generate_launch_description():
         DeclareLaunchArgument(
             'api_key',
             default_value='',
-            description='Word Orb API key (empty for free tier, 500 calls/day)',
+            description='Word Orb API key (empty for the no-key limit, 200 calls/day per IP)',
         ),
         DeclareLaunchArgument(
             'default_language',

@@ -13,7 +13,7 @@ Provides:
     /word_orb/lesson_of_the_day  (LessonData) — periodic daily lesson
 
   Parameters
-    api_key            (string)  — Word Orb API key (empty = free tier)
+    api_key            (string)  — Word Orb API key (empty = no-key limit, 200 calls/day per IP)
     base_url           (string)  — API base URL (default: https://wordorb.ai)
     cache_ttl          (int)     — Cache TTL in seconds (default: 3600)
     default_language   (string)  — Default language code (default: en)
