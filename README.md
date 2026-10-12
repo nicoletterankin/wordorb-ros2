@@ -39,7 +39,7 @@ colcon build --packages-select wordorb_ros2
 source install/setup.bash
 ```
 
-### 4. Get a free API key
+### 4. Get an API key
 
 ```bash
 curl -s -X POST https://wordorb.ai/api/signup \
@@ -47,7 +47,7 @@ curl -s -X POST https://wordorb.ai/api/signup \
   -d '{"email":"you@example.com","name":"My Robot"}' | jq .key
 ```
 
-Free tier: 500 calls/day, no credit card.
+$0 tier: 500 calls/day, no credit card.
 
 ### 5. Launch
 
@@ -92,7 +92,7 @@ ros2 topic echo /word_orb/lesson_of_the_day
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| `api_key` | string | `""` | Word Orb API key. Empty = free tier (500/day). |
+| `api_key` | string | `""` | Word Orb API key. Empty = $0 tier (500/day). |
 | `base_url` | string | `https://wordorb.ai` | API base URL |
 | `cache_ttl` | int | `3600` | Seconds to cache API responses |
 | `default_language` | string | `en` | Default language for lookups (47 available) |
